@@ -2,8 +2,9 @@ import React from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-  const titleChangeHandler = () => {
-    console.log('Title Changed!')
+  const [enteredTitle, setEnteredTitle] = useState('')
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value);
   }
   return (
     <form>

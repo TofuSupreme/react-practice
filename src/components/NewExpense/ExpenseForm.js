@@ -19,12 +19,18 @@ const ExpenseForm = () => {
   };
 
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+   setUserInput({
+      ...userInput,
+      enteredAmount: event.amount.value,
+    });
   };
 
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
-  };
+    setUserInput({
+      ...userInput,
+      enteredDate: event.dateS.value,
+    });
+  }
 
   return (
     <form>

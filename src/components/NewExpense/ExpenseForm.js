@@ -34,8 +34,14 @@ const ExpenseForm = () => {
     // });
   }
 
+  const submitHandler = (event) => {
+event.preventDefault();
+
+  };
+
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__controls">
           <label>Title</label>

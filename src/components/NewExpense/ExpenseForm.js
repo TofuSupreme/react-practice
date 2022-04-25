@@ -40,15 +40,16 @@ const ExpenseForm = () => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate).toISOString(),
     };
+    console.log(expenseData)
   };
 
 
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
-        <div className="new-expense__controls">
+        <div className="new-expense__control">
           <label>Title</label>
           <input type="text" onChange={titleChangeHandler }/>
         </div>
